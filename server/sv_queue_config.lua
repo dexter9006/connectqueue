@@ -4,9 +4,11 @@ Config = {}
 -- a lot of the steamid converting websites are broken rn and give you the wrong steamid. I use https://steamid.xyz/ with no problems.
 -- you can also give priority through the API, read the examples/readme.
 Config.Priority = {
-    ["STEAM_0:1:0000####"] = 1,
-    ["steam:110000######"] = 25,
-    ["ip:127.0.0.0"] = 85
+    --["STEAM_0:1:0000####"] = 1,
+    --["steam:110000######"] = 25,
+    --["ip:127.0.0.0"] = 85
+    ["steam:11000010a9603b6 "] = 25, -- Vitto
+    ["steam:11000011adf9d15 "] = 25, -- Walter
 }
 
 -- require people to run steam
@@ -28,7 +30,7 @@ Config.ConnectTimeOut = 600
 Config.QueueTimeOut = 90
 
 -- will give players temporary priority when they disconnect and when they start loading in
-Config.EnableGrace = false
+Config.EnableGrace = true
 
 -- how much priority power grace time will give
 Config.GracePower = 5
@@ -36,16 +38,16 @@ Config.GracePower = 5
 -- how long grace time lasts in seconds
 Config.GraceTime = 480
 
-Config.AntiSpam = false
-Config.AntiSpamTimer = 30
+Config.AntiSpam = true
+Config.AntiSpamTimer = 10
 Config.PleaseWait = "Please wait %f seconds. The connection will start automatically!"
 
 -- on resource start, players can join the queue but will not let them join for __ milliseconds
 -- this will let the queue settle and lets other resources finish initializing
-Config.JoinDelay = 30000
+Config.JoinDelay = 30 * 1000
 
 -- will show how many people have temporary priority in the connection message
-Config.ShowTemp = false
+Config.ShowTemp = true
 
 -- simple localization
 Config.Language = {
